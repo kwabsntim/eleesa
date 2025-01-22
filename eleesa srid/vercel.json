@@ -1,5 +1,5 @@
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "eleesa.html" }
+    { "source": "/(.*)", "destination": "eleesa-srid/eleesa.html" }
   ]
 }
