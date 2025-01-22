@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* General styling for the parallax effect */
+.parallax {
+  background-image: url("im3.jpg"); /* Replace with your image */
+  min-height: 400px; /* Adjust height as needed */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; /* Needed to position the overlay text */
+}
+
+/* Overlay text styling */
+.parallax .parallax-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Add some shadow for better readability */
+  text-align: center;
+}
+
+.content {
+  height: 1000px; /* Extra content to enable scrolling */
+  background-color: #f4f4f4;
+  padding: 20px;
+  font-size: 18px;
+}
+</style>
+</head>
+<body>
+
+<p>Scroll up and down this page to see the parallax scrolling effect with text overlay.</p>
+
+<!-- Parallax Section -->
+<div class="parallax">
+  <div class="overlay-text">Welcome to the Parallax Effect</div>
+</div>
+
+<!-- Content Section -->
+<div class="content">
+  <p>This div is just here to enable scrolling and to demonstrate the parallax effect.</p>
+  <p>Feel free to add more content or customize the layout as needed.</p>
+</div>
+
+</body>
+</html>

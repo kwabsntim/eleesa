@@ -1,0 +1,498 @@
+body{
+    margin: 0;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  
+    
+}
+@font-face {
+  font-family: 'Rennie Bean';
+  src: url('fonts/ReenieBeanie.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.bgImage{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(im1.PNG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center ;
+    animation: bgChange 40s linear infinite;
+}
+@keyframes bgChange {
+    0% {
+        background-image: url(im1.PNG); /* Show for 4 seconds */
+    }
+    20% {
+        background-image: url(im2.PNG); /* Show for 6 seconds */
+    }
+    50% {
+        background-image: url(im5.jpg); /* Show for 5 seconds */
+    }
+    75% {
+        background-image: url(im4.jpg); /* Show for 3 seconds */
+    }
+    100% {
+        background-image: url(im1.PNG); /* Reset to first image */
+    }
+    
+}
+.nav-link {
+    text-decoration: none;
+    color: #000;
+    padding-bottom: 2px;
+    border-bottom: 3px solid transparent;
+    transition: border-color 0.5s ease;
+  }
+  
+  .nav-link:hover {
+    border-color:white;
+    color: whitesmoke
+  }
+  
+
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    top:0px;
+    left: 0px;
+    color: white;
+    font-family: "Yeseva One", serif;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+.hamburger{
+    color:white;
+}
+/* The Overlay (background) */
+.sidenav {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+    height: 100%;
+    width:0;
+    position: fixed; /* Stay in place */
+     /* Sit on top */
+    right:0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgb(23,90,171); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.6s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  }
+  
+  /* Position the content inside the overlay */
+  .sidenavc {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  }
+  
+  /* The navigation links inside the overlay */
+  .sidenav a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 20px;
+    color:white;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover, .sidenav a:focus {
+    color: #f1f1f1;
+  }
+  
+  /* Position the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 9px;
+    right: 45px;
+    font-size: 50px;
+  }
+  
+  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+  @media screen and (max-height: 450px) {
+    .sidenav a {font-size: 20px}
+    .sidenav .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+
+.content{
+    position: relative;
+    width:100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index:2;
+    color: white;
+}
+#navbar {
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out;
+    height: 110px;
+  }
+
+  /* Scrolled navbar style */
+  #navbar.scrolled {
+    background-color:rgb(23,90,171);
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+.navbar-brand{
+    color: white ;
+    text-decoration: none;
+    font-size:60px;
+    font-weight: 500;
+}
+.logo{
+    width: 80px;
+    text-decoration: none;
+    margin-left: 5px;
+    margin-top: 3px;
+
+}
+.executives{
+    padding:30px;
+    text-align: center;
+    font-family: 'Roboto';
+    font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:10px;
+
+}
+.navbar-nav a {
+        position: relative;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 21px;
+        display: inline-block;
+        margin-left: auto;
+      
+        font-weight: 700;
+    
+}
+.leaders{
+  text-align: center;
+}
+.leadership{
+  text-align: center;
+  color:rgb(23,90,171);
+  font-family: 'Yeseva one';
+  margin-bottom: 50px;
+}
+.departments{
+  margin-top: 30px;
+  text-align: center;
+}
+.inside-logo{
+  margin-bottom: 30px;
+  color:white
+}
+
+.stats-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px 20px;
+  margin-top:40px;
+  
+}
+
+.counter {
+  font-size: 100px;
+  font-weight: bold;
+  color:white;
+  font-family: 'Rennie Bean', serif;
+}
+
+p {
+  margin-top: 10px;
+  font-size: 20px;
+}
+.top-buttons{
+    display: inline;
+    margin-top: 80px;
+    
+}
+.top-buttons a{
+    
+    background-color:rgb(23,90,171);
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    padding:25px;
+    padding-left:40px;
+    padding-right: 40px;
+    border-radius: 9px;
+    box-shadow: rgba(0,0,0,0.5);/* Add appropriate property value */
+}
+.top-buttons a:hover{
+    text-decoration: none;
+    color: white;
+    background-color: #000;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, border-radius 0.3s ease;
+  
+}
+.mvv{
+  
+  padding-bottom: 40px;
+display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+
+  
+  
+}
+.card{
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease-in-out;
+  
+}
+.over-text{
+
+    text-align: center;
+    margin-top: 70px;
+    padding-bottom: 30px;
+    font-size: 16px;
+    margin: 20px;
+}
+.over-text p{
+  font-size: 16px;
+}
+.intro, .outro,.icons,.top-buttons {
+    opacity: 0;
+  }
+  
+  /* Pop-up animation for the intro */
+  .intro {
+    animation: popUp 2s ease-out forwards;
+  }
+  
+  /* Slide-in animation for the outro */
+  .outro {
+    animation: slideIn 1s ease-out 0.5s forwards;
+  }
+ .icons{
+    animation: icons 1s ease-out 0.5s forwards;
+ }
+ .top-buttons{
+    animation: button 1s ease-out 0.5s forwards;
+ }
+
+  /* Keyframes for pop-up animation */
+  @keyframes popUp {
+    0% {
+      transform: scale(0.7);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  /* Keyframes for slide-in animation */
+  @keyframes slideIn {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0.3);
+      opacity: 1;
+    }
+  }
+  @keyframes icons {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0.3);
+      opacity: 1;
+    }
+  }
+  @keyframes button {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(-0.4px);
+      opacity: 1;
+    }
+  }
+.navbar-nav {
+    margin-left: auto; /* Push the links to the right */
+  }
+  
+.intro{
+    font-size: 60px;
+    font-weight: 900;
+    font-family: 'Yeseva one', sans-serif;
+    margin-left: 10px;
+    font-style: bold;
+    margin-top: 100px;
+}
+
+.parallax {
+    background-image: url("im3.jpg"); /* Replace with your image */
+    min-height: 350px; /* Adjust height as needed */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; /* Needed to position the overlay text */
+  }
+  
+  /* Overlay text styling */
+  .parallax .parallax-text {
+    position: absolute;
+    width: 100%;
+    height:100%;
+;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+  
+  
+  }
+
+ 
+
+  .courses{
+        background-image: url("im1.PNG"); /* Replace with your image */
+    min-height: 350px; /* Adjust height as needed */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; /* Needed to position the overlay text */
+  }
+  .cbuttons{
+          position: absolute;
+    width: 100%;
+    height:100%;
+;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+  }
+
+  
+  .after-p {
+    height: 1000px; /* Extra content to enable scrolling */
+    background-color: #f4f4f4;
+    padding: 20px;
+    font-size: 18px;
+  }
+  .parallax2 .parallax-text2{
+    position: absolute;
+    width: 100%;
+    height:100%;
+;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+  }
+
+.icons{
+    margin-top: 20px;
+    margin-left: 2px;
+    
+
+}
+.icons a{
+    text-decoration: none;
+    color:white;
+    margin-left: 10px;
+}
+svg:hover{
+color:white;
+transform: scale(1.3);
+transition: transform 0.5s ease;
+cursor:pointer;
+}
+.outro{
+    font-size: 25px;
+    text-align: center;
+    
+   
+}
+@media (max-width: 768px) {
+    body{
+      overflow-x: hidden;
+    }
+    .intro {
+        font-size: 35px;
+    }
+   
+    .content {
+        padding: 20px;
+        margin-bottom:50px;
+    }
+    .outro{
+        font-size: 19px;
+    }
+    .logo{
+        margin-left:2px;
+    }
+    .mvv{
+      margin:40px;
+    }
+    .card{
+      width:18rem;
+    }
+    .after-p{
+      align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro {
+        font-size: 30px;
+    }
+    .content {
+        padding: 10px;
+        
+    }
+    .outro{
+        font-size: 19px;
+        margin-left: 10px;
+    }
+    .logo{
+        margin-left: 2px;
+    }
+    .card{
+      width:18rem;
+    }
+}
